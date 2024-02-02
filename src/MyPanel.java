@@ -7,11 +7,13 @@ public class MyPanel extends JPanel {
  int xVel = 2;
  int yVel = 2;
 
+
  Ball myBall;
 Ball[] ball20;
     public MyPanel(){
         setBackground(Color.GREEN);
         myBall = new Ball(200, 300);
+        setPreferredSize(new Dimension(500, 500));
 
        ball20 = new Ball[20];
        for(int i = 0; i < ball20.length; i++){
@@ -37,11 +39,11 @@ Ball[] ball20;
         System.out.println("hi");
         myBall.draw(g);
         myBall.move();
-        myBall.bounce();
+        myBall.bounce(getWidth()-20, getHeight()-20);
         for(int i = 0; i < ball20.length; i++){
             ball20[i].draw(g);
             ball20[i].move();
-            ball20[i].bounce();
+            ball20[i].bounce(getWidth()-20, getHeight()-20);
         }
         //yLoc++;
 

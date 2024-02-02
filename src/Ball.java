@@ -35,17 +35,14 @@ public class Ball {
         y+=speed;
     }
 
-    public void bounce(){
-        if(x >= 500-size){
+    public void bounce(int w, int l){
+        if(x >= w){
             speed*=-1;
-
-
-
         }
         if(x < 1+size){
             speed*=-1;
         }
-        if(y >= 500-size){
+        if(y >= l){
             speed*=-1;
         }
         if(y< 1+size){
