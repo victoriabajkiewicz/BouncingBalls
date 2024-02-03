@@ -36,7 +36,7 @@ Ball[] ball20;
     public void paintComponent(Graphics g){
         //super goes up a hierarchy level and calls the method
         super.paintComponent(g);
-        System.out.println("hi");
+       
         myBall.draw(g);
         myBall.move();
         myBall.bounce(getWidth()-20, getHeight()-20);
